@@ -61,4 +61,6 @@ return require('packer').startup(function(use)
     }
     use "numToStr/FTerm.nvim"
     use "HiPhish/nvim-ts-rainbow2"
+    use "sQVe/sort.nvim"
+    use "christoomey/vim-tmux-navigator"
   end)
