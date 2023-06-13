@@ -28,6 +28,7 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("i", "jk", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
@@ -48,4 +49,6 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
-
+-- Add spaces without leaving normal mode
+vim.keymap.set("n", "<leader>o", "o<Esc>k")
+vim.keymap.set("n", "<leader>O", "O<Esc>j")

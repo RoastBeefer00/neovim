@@ -63,4 +63,16 @@ return require('packer').startup(function(use)
     use "HiPhish/nvim-ts-rainbow2"
     use "sQVe/sort.nvim"
     use "christoomey/vim-tmux-navigator"
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+    use {
+        'phaazon/hop.nvim',
+        branch = 'v2', -- optional but strongly recommended
+        config = function()
+            -- you can configure Hop the way you like here; see :h hop-config
+            require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+        end
+    }
   end)
