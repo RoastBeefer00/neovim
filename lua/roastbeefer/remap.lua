@@ -29,8 +29,6 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
--- This is going to get me cancelled
-vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("i", "fw", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
@@ -48,3 +46,6 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 -- Add spaces without leaving normal mode
 vim.keymap.set("n", "<leader>o", "o<Esc>k")
 vim.keymap.set("n", "<leader>O", "O<Esc>j")
+
+-- Fugitive
+vim.keymap.set("n", "<leader>gp", "<cmd>Git push<CR>")
