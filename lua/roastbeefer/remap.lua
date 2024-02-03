@@ -56,5 +56,5 @@ vim.keymap.set("n", "<leader>o", "o<Esc>k")
 vim.keymap.set("n", "<leader>O", "O<Esc>j")
 
 -- Fugitive
-vim.keymap.set("n", "<leader>gp", "<cmd>Git push<CR>")
+vim.keymap.set("n", "<leader>gp", "<cmd>Git push<CR><cmd>q<CR>")
 vim.keymap.set("n", "<leader>ga", "<cmd>Git add .<CR>")
