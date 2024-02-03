@@ -17,6 +17,9 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "l", "nzzzv")
 vim.keymap.set("n", "L", "Nzzzv")
 
+-- vim.keymap.set("n", "gs", "^")
+-- vim.keymap.set("n", "gl", "$")
+
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 

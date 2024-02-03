@@ -14,7 +14,7 @@ return {
             end)
         end
     },
-    "HiPhish/nvim-ts-rainbow2",
+    "HiPhish/rainbow-delimiters.nvim",
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
@@ -40,22 +40,9 @@ return {
                     -- Instead of true it can also be a list of languages
                     additional_vim_regex_highlighting = false,
                 },
-                -- rainbow = {
-                --   enable = true,
-                --   -- list of languages you want to disable the plugin for
-                --   disable = { 'jsx', 'cpp' },
-                --   -- Which query to use for finding delimiters
-                --   query = 'rainbow-parens',
-                --   -- Highlight the entire buffer all at once
-                --   strategy = require('ts-rainbow').strategy.global,
-                -- }
             })
         end
     },
-    -- 'theprimeagen/harpoon',
-    -- 'mbbill/undotree',
-    -- 'tpope/vim-fugitive',
-
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -140,7 +127,7 @@ return {
                         local opts = { buffer = bufnr, remap = false }
 
                         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
-                        vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+                        vim.keymap.set("n", "<leader>K", function() vim.lsp.buf.hover() end, opts)
                         vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
                         vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
                         vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
@@ -183,15 +170,6 @@ return {
         opts = {} -- this is equalent to setup({}) function
     },
 
-    -- "numToStr/FTerm.nvim",
     "sQVe/sort.nvim",
     "christoomey/vim-tmux-navigator",
-    -- {
-    --     'phaazon/hop.nvim',
-    --     branch = 'v2', -- optional but strongly recommended
-    --     config = function()
-    --         -- you can configure Hop the way you like here; see :h hop-config
-    --         require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-    --     end
-    -- },
 }
