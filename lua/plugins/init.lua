@@ -8,6 +8,7 @@ return {
             require("telescope").setup()
             local builtin = require('telescope.builtin')
             vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+            vim.keymap.set('n', '<leader>ft', "<cmd>TodoTelescope<CR>", {})
             vim.keymap.set('n', '<C-p>', builtin.git_files, {})
             vim.keymap.set('n', '<leader>fs', function()
                 builtin.grep_string({ search = vim.fn.input("Grep > ") });
@@ -161,9 +162,10 @@ return {
         }
     },
 
-    'othree/html5.vim',
-    'pangloss/vim-javascript',
-    'evanleck/vim-svelte',
+    -- TODO: figure out if I need these
+    -- 'othree/html5.vim',
+    -- 'pangloss/vim-javascript',
+    -- 'evanleck/vim-svelte',
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
