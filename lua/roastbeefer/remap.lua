@@ -17,6 +17,14 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "l", "nzzzv")
 vim.keymap.set("n", "L", "Nzzzv")
 
+-- Window splits
+vim.keymap.set("n", "<leader>ws", "<cmd>split<CR><C-w><down>")
+vim.keymap.set("n", "<leader>wv", "<cmd>vsplit<CR><C-w><right>")
+vim.keymap.set("n", "<leader>wm", "<C-w><left>")
+vim.keymap.set("n", "<leader>wn", "<C-w><down>")
+vim.keymap.set("n", "<leader>we", "<C-w><up>")
+vim.keymap.set("n", "<leader>wi", "<C-w><right>")
+
 -- vim.keymap.set("n", "gs", "^")
 -- vim.keymap.set("n", "gl", "$")
 
@@ -49,3 +57,4 @@ vim.keymap.set("n", "<leader>O", "O<Esc>j")
 
 -- Fugitive
 vim.keymap.set("n", "<leader>gp", "<cmd>Git push<CR>")
+vim.keymap.set("n", "<leader>ga", "<cmd>Git add .<CR>")
