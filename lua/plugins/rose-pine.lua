@@ -54,7 +54,8 @@ return {
             },
 
             highlight_groups = {
-                -- Comment = { fg = "foam" },
+                Comment = { fg = "foam" },
+                String = { fg = "iris" },
                 -- VertSplit = { fg = "muted", bg = "muted" },
             },
 
