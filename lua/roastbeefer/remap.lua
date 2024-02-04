@@ -25,6 +25,9 @@ vim.keymap.set("n", "<leader>wn", "<C-w><down>")
 vim.keymap.set("n", "<leader>we", "<C-w><up>")
 vim.keymap.set("n", "<leader>wi", "<C-w><right>")
 
+-- undo like helix
+vim.keymap.set("n", "U", "<C-r>")
+
 -- vim.keymap.set("n", "gs", "^")
 -- vim.keymap.set("n", "gl", "$")
 
