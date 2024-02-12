@@ -10,7 +10,7 @@ return {
         -- REQUIRED
 
         vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end)
-        -- vim.keymap.set("n", "<C-A-h>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+        vim.keymap.set("n", "<C-A-h>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
         vim.keymap.set("n", "<C-A-m>", function() harpoon:list():select(1) end)
         vim.keymap.set("n", "<C-A-n>", function() harpoon:list():select(2) end)
@@ -39,7 +39,7 @@ return {
             }):find()
         end
 
-        vim.keymap.set("n", "<C-A-h>", function() toggle_telescope(harpoon:list()) end,
+        vim.keymap.set("n", "<leader>fh", function() toggle_telescope(harpoon:list()) end,
         { desc = "Open harpoon window" })
     end
 }
