@@ -4,7 +4,7 @@ return {
     config = function()
         local home = vim.fn.expand("$HOME")
         require("chatgpt").setup({
-            api_key_cmd = "cat " .. home .. "/.chatgpt"
+            api_key_cmd = "pass show chatgpt/api/key"
         })
     end,
     dependencies = {
