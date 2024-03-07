@@ -6,7 +6,7 @@ vim.keymap.set({ "n", "v" }, "n", "j")
 vim.keymap.set({ "n", "v" }, "e", "k")
 vim.keymap.set({ "n", "v" }, "i", "l")
 vim.keymap.set("n", "k", "i")
-vim.keymap.set("n", "K", "I")
+vim.keymap.set("n", "K", "I", { noremap = true, silent = true })
 
 vim.keymap.set("v", "N", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "E", ":m '<-2<CR>gv=gv")
