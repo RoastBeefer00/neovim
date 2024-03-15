@@ -12,7 +12,12 @@ return {
                     { 'mode', separator = { left = '' }, right_padding = 2 },
                 },
                 lualine_b = { 'filename', 'branch' },
-                lualine_c = { 'fileformat' },
+                lualine_c = { 'fileformat', 'another_item', {
+                    "harpoon2",
+                    indicators = { "m", "n", "e", "i" },
+                    active_indicators = { "M", "N", "E", "I" },
+                },
+                },
                 lualine_x = {},
                 lualine_y = { 'filetype', 'progress' },
                 lualine_z = {
