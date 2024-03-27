@@ -58,6 +58,18 @@ return {
                 'neovim/nvim-lspconfig',
                 config = function()
                     local lsp = require("lsp-zero")
+                    require('lspconfig').html.setup({
+                        filetypes = {
+                            "html",
+                            "templ"
+                        }
+                    })
+                    require('lspconfig').htmx.setup({
+                        filetypes = {
+                            "html",
+                            "templ"
+                        }
+                    })
                     require('lspconfig').tailwindcss.setup({
                         filetypes = {
                             "css",
@@ -72,7 +84,8 @@ return {
                             "svelte",
                             "vue",
                             "rust",
-                            "rs"
+                            "rs",
+                            "templ"
                         },
                         experimental = {
                             classRegex = {
@@ -85,6 +98,7 @@ return {
                                 eelixir = "html-eex",
                                 eruby = "erb",
                                 rust = "html",
+                                templ = "html"
                             },
                         },
                         root_dir = require 'lspconfig'.util.root_pattern('tailwind.config.js', 'tailwind.config.ts',
@@ -118,6 +132,9 @@ return {
                     lsp.setup_nvim_cmp({
                         mapping = cmp_mappings,
                         sources = {
+                            { name = 'nvim_lsp' },
+                            { name = 'luasnip' },
+                            { name = 'path' },
                             { name = "codeium" }
                         }
                     })
@@ -168,6 +185,7 @@ return {
             { 'hrsh7th/nvim-cmp' },     -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
             { 'L3MON4D3/LuaSnip' },     -- Required
+            { 'hrsh7th/cmp-path' },
         }
     },
 

@@ -1,29 +1,29 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-vim.keymap.set({ "n", "v" }, "m", "h")
-vim.keymap.set({ "n", "v" }, "n", "j")
-vim.keymap.set({ "n", "v" }, "e", "k")
-vim.keymap.set({ "n", "v" }, "i", "l")
-vim.keymap.set("n", "k", "i")
-vim.keymap.set("n", "K", "I", { noremap = true, silent = true })
+-- vim.keymap.set({ "n", "v" }, "m", "h")
+-- vim.keymap.set({ "n", "v" }, "n", "j")
+-- vim.keymap.set({ "n", "v" }, "e", "k")
+-- vim.keymap.set({ "n", "v" }, "i", "l")
+-- vim.keymap.set("n", "k", "i")
+-- vim.keymap.set("n", "K", "I", { noremap = true, silent = true })
 
-vim.keymap.set("v", "N", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "E", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-vim.keymap.set("n", "N", "mzJ`z")
+-- vim.keymap.set("n", "N", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "l", "nzzzv")
-vim.keymap.set("n", "L", "Nzzzv")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 
 -- Window splits
 vim.keymap.set("n", "<leader>ws", "<cmd>split<CR><C-w><down>")
 vim.keymap.set("n", "<leader>wv", "<cmd>vsplit<CR><C-w><right>")
-vim.keymap.set("n", "<leader>wm", "<C-w><left>")
-vim.keymap.set("n", "<leader>wn", "<C-w><down>")
-vim.keymap.set("n", "<leader>we", "<C-w><up>")
-vim.keymap.set("n", "<leader>wi", "<C-w><right>")
+vim.keymap.set("n", "<leader>wh", "<C-w><left>")
+vim.keymap.set("n", "<leader>wj", "<C-w><down>")
+vim.keymap.set("n", "<leader>wk", "<C-w><up>")
+vim.keymap.set("n", "<leader>wl", "<C-w><right>")
 
 -- undo like helix
 vim.keymap.set("n", "U", "<C-r>")
