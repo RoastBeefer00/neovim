@@ -126,6 +126,9 @@ return {
                         ["<C-Space>"] = cmp.mapping.complete(),
                     })
 
+                    cmp.config.formatting = {
+                        format = require("tailwindcss-colorizer-cmp").formatter
+                    }
                     cmp_mappings['<Tab>'] = nil
                     cmp_mappings['<S-Tab>'] = nil
 
@@ -189,10 +192,6 @@ return {
         }
     },
 
-    -- TODO: figure out if I need these
-    -- 'othree/html5.vim',
-    -- 'pangloss/vim-javascript',
-    -- 'evanleck/vim-svelte',
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
@@ -200,5 +199,6 @@ return {
     },
 
     "sQVe/sort.nvim",
-    "christoomey/vim-tmux-navigator",
+    -- "christoomey/vim-tmux-navigator",
+    "mrjones2014/smart-splits.nvim",
 }

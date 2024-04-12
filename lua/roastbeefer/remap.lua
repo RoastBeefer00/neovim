@@ -41,9 +41,10 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 vim.keymap.set("i", "fw", "<Esc>")
+vim.keymap.set("i", "jk", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<C-f>", "<cmd>silent !wez-sess<CR>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- vim.keymap.set("n", "<C-e>", "<cmd>cnext<CR>zz")
@@ -61,3 +62,14 @@ vim.keymap.set("n", "<leader>O", "O<Esc>j")
 -- Fugitive
 vim.keymap.set("n", "<leader>gp", "<cmd>Git push<CR>")
 vim.keymap.set("n", "<leader>ga", "<cmd>Git add .<CR>")
+
+vim.keymap.set('n', '<C-A-h>', require('smart-splits').resize_left)
+vim.keymap.set('n', '<C-A-j>', require('smart-splits').resize_down)
+vim.keymap.set('n', '<C-A-k>', require('smart-splits').resize_up)
+vim.keymap.set('n', '<C-A-l>', require('smart-splits').resize_right)
+-- moving between splits
+vim.keymap.set('n', '<C-h>', require('smart-splits').move_cursor_left)
+vim.keymap.set('n', '<C-j>', require('smart-splits').move_cursor_down)
+vim.keymap.set('n', '<C-k>', require('smart-splits').move_cursor_up)
+vim.keymap.set('n', '<C-l>', require('smart-splits').move_cursor_right)
+vim.keymap.set('n', '<C-\\>', require('smart-splits').move_cursor_previous)
