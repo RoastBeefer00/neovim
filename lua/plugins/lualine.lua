@@ -14,8 +14,8 @@ return {
                 lualine_b = { 'filename', 'branch' },
                 lualine_c = { 'fileformat', 'another_item', {
                     "harpoon2",
-                    indicators = { "s", "t", "n", "r" },
-                    active_indicators = { "S", "T", "N", "R" },
+                    indicators = { "h", "t", "s", "n" },
+                    active_indicators = { "H", "T", "S", "N" },
                 },
                 },
                 lualine_x = {},
