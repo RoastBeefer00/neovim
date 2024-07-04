@@ -57,18 +57,39 @@ return {
             {
                 'neovim/nvim-lspconfig',
                 config = function()
+                    local lspconfig = require("lspconfig")
+                    local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+                    lspconfig.bashls.setup({ capabilities = lsp_capabilities })
+                    lspconfig.cssls.setup({ capabilities = lsp_capabilities })
+                    lspconfig.dockerls.setup({ capabilities = lsp_capabilities })
+                    lspconfig.gopls.setup({ capabilities = lsp_capabilities })
+                    lspconfig.jsonls.setup({ capabilities = lsp_capabilities })
+                    lspconfig.pyright.setup({ capabilities = lsp_capabilities })
+                    lspconfig.rust_analyzer.setup({ capabilities = lsp_capabilities })
+                    lspconfig.svelte.setup({ capabilities = lsp_capabilities })
+                    lspconfig.lua_ls.setup({ capabilities = lsp_capabilities })
+                    lspconfig.templ.setup({ capabilities = lsp_capabilities })
+                    lspconfig.nil_ls.setup({ capabilities = lsp_capabilities })
+                    lspconfig.terraformls.setup({ capabilities = lsp_capabilities })
+                    lspconfig.tsserver.setup({ capabilities = lsp_capabilities })
+                    lspconfig.vimls.setup({ capabilities = lsp_capabilities })
+                    lspconfig.yamlls.setup({ capabilities = lsp_capabilities })
+
                     local lsp = require("lsp-zero")
                     require('lspconfig').html.setup({
                         filetypes = {
                             "html",
                             "templ"
-                        }
+                        },
+                        capabilities = lsp_capabilities
                     })
                     require('lspconfig').htmx.setup({
                         filetypes = {
                             "html",
                             "templ"
-                        }
+                        },
+                        capabilities = lsp_capabilities
                     })
                     require('lspconfig').tailwindcss.setup({
                         filetypes = {
@@ -104,13 +125,14 @@ return {
                         root_dir = require 'lspconfig'.util.root_pattern('tailwind.config.js', 'tailwind.config.ts',
                             'postcss.config.js',
                             'postcss.config.ts', 'package.json', 'node_modules'),
+                        capabilities = lsp_capabilities
                     })
 
                     lsp.preset("recommended")
 
                     lsp.ensure_installed({
-                        'tsserver',
-                        'rust_analyzer',
+                        -- 'tsserver',
+                        -- 'rust_analyzer',
                     })
 
                     -- Fix Undefined global 'vim'
@@ -176,13 +198,13 @@ return {
                 end
             }, -- Required
 
-            {  -- Optional
-                'williamboman/mason.nvim',
-                build = function()
-                    pcall(vim.cmd, 'MasonUpdate')
-                end,
-            },
-            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+            -- {  -- Optional
+            --     'williamboman/mason.nvim',
+            --     build = function()
+            --         pcall(vim.cmd, 'MasonUpdate')
+            --     end,
+            -- },
+            -- { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },     -- Required
